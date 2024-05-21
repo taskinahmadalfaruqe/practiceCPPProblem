@@ -1,9 +1,7 @@
-#include<stdio.h>
-#include<string.h>
-#include<limits.h>
+#include <iostream>
+using namespace std;
 int main()
 {
-    int a;
-    
+    cout << "Hello world";
     return 0;
 }
