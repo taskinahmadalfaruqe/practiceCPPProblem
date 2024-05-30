@@ -11,7 +11,7 @@ int main()
     while (T--)
     {
         int id1, id2, id3;
-        string name1, name2, name3;
+        char name1, name2, name3;
         char section1, section2, section3;
         int marks1, marks2, marks3;
 
