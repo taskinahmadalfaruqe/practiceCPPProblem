@@ -4,6 +4,6 @@ int main()
 {
 int a;
 cin>>a;
-court<<a;
+cout<<a;
 return:0;
 }
