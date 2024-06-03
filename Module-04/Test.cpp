@@ -2,8 +2,7 @@
 using namespace std;
 int main()
 {
-int a;
-cin>>a;
+int a=10;
 cout<<a;
-return:0;
+return 0;
 }
