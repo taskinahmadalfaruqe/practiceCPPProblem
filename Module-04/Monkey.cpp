@@ -16,28 +16,31 @@
 
 //     return 0;
 // }
-#include <iostream>
-#include <string>
-#include <algorithm>
 
+#include <bits/stdc++.h>
 using namespace std;
 
 int main()
 {
-    string line;
-    while (getline(cin, line))
+    char line[100001];
+
+    while (cin.getline(line, 100001))
     {
-        string result;
-        for (char c : line)
+        char NewLine[100001];
+        int j = 0;
+        int length = strlen(line);
+
+        for (int i = 0; i < length; ++i)
         {
-            if (c != ' ')
+            if (line[i] != ' ')
             {
-                result += c;
+                NewLine[j++] = line[i];
             }
         }
-        sort(result.begin(), result.end());
-        cout << result << endl;
+        NewLine[j] = '\0';
+        int lineLength = strlen(NewLine);
+        sort(NewLine, NewLine + lineLength);
+        cout << NewLine << endl;
     }
-
     return 0;
 }
