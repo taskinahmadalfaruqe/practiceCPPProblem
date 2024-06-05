@@ -24,7 +24,7 @@ bool cmp(Student a, Student b)
         else
             return false;
     }
-}
+};
 int main()
 {
     int n;
@@ -43,4 +43,4 @@ int main()
     }
 
     return 0;
-}
+};
