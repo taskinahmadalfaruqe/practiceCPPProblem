@@ -5,7 +5,7 @@ int main()
     // we can assign string as we need.
     string s;
     s = "Taskin";
-    s = "Faruqe";
+    s = "TaskinFaruqe";
 
     string s2 = "Ahmad";
     // we can compare a string easily
