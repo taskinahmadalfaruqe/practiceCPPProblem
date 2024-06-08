@@ -17,6 +17,7 @@ int main()
     {
         cout << "Note Same" << endl;
     }
+
     cout << s;
 
     return 0;
