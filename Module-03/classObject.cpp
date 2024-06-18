@@ -15,8 +15,10 @@ int main()
 
     // we cant reassign a char directly
     char temp[100] = "Taskin Ahmad Al Faruqe";
+
     strcpy(Taskin.name, temp);
 
     cout << Taskin.name;
+
     return 0;
 }
