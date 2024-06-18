@@ -12,6 +12,7 @@ int main()
     Student Taskin;
     Taskin.roll = 10;
     Taskin.CGPA = 3.74;
+
     // we cant reassign a char directly
     char temp[100] = "Taskin Ahmad Al Faruqe";
     strcpy(Taskin.name, temp);
