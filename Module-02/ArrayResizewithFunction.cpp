@@ -14,6 +14,7 @@ int main()
     // step-4
     // increase array a size
 
+
     // step-5
     // copy array b value on newly increased array a
 
