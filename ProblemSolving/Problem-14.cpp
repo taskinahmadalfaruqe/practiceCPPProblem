@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 int main()
@@ -18,21 +17,44 @@ int main()
     }
 
     bool isUnitMatrix = true;
+
     for (int i = 0; i < N; i++)
     {
         for (int j = 0; j < N; j++)
         {
-            if ((i == j && matrix[i][j] != 1) ||
-                (i != j && matrix[i][j] != 0))
+            if (i == j)
             {
-                isUnitMatrix = false;
-                break;
+
+                if (matrix[i][j] != 1)
+                {
+                    isUnitMatrix = false;
+                    break;
+                }
+            }
+            else
+            {
+
+                if (matrix[i][j] != 0)
+                {
+                    isUnitMatrix = false;
+                    break;
+                }
             }
         }
         if (!isUnitMatrix)
+        {
             break;
+        }
     }
-    cout << (isUnitMatrix ? "YES" : "NO") << endl;
+
+    if (isUnitMatrix)
+    {
+        cout << "YES" << endl;
+    }
+    else
+    {
+        cout << "NO" << endl;
+    }
 
     return 0;
 }
