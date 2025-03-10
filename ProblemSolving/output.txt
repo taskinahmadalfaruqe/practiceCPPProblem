@@ -1,1 +1,2 @@
-200
+Singel Product Price: 104.4
+Interest Product Price: 130.5
