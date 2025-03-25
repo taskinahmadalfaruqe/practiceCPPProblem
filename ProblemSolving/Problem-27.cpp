@@ -1,36 +1,70 @@
-#include <bits/stdc++.h>
+#include <iostream>
+
 using namespace std;
-int main()
-{
-    int row, col, sum = 0;
 
-    cout << "Enter the number of rows and columns: ";
-    cin >> row >> col;
+// Node structure for the linked list
+struct Node {
+    int data;
+    Node* next;
+    Node(int val) : data(val), next(nullptr) {}
+};
 
-    int matrix[row][col];
-
-    cout << "Enter elements of matrix: " << endl;
-
-    // input metrix element
-    for (int i = 0; i < row; i++)
-    {
-        for (int j = 0; j < col; j++)
-        {
-            cin >> matrix[i][j];
-        }
+// Function to insert a new node at the end
+void insert(Node*& head, int data) {
+    Node* newNode = new Node(data);
+    if (!head) {
+        head = newNode;
+        return;
     }
+    Node* temp = head;
+    while (temp->next)
+        temp = temp->next;
+    temp->next = newNode;
+}
 
-    // sum value of matrices
-    for (int i = 0; i < row; i++)
-    {
-        for (int j = 0; j < col; j++)
-        {
-            sum += matrix[i][j];
-        }
+// Function to print the linked list
+void printList(Node* head) {
+    while (head) {
+        cout << head->data << " -> ";
+        head = head->next;
     }
+    cout << "NULL\n";
+}
 
-    int totalElement = row * col;
-    double Average = double(sum) / totalElement;
-    cout << "Average of the Mettrix is: " << fixed << setprecision(2) << Average << endl;
+// Function to reverse the linked list
+Node* reverseList(Node* head) {
+    Node* prev = nullptr;
+    Node* curr = head;
+    Node* next = nullptr;
+    
+    while (curr) {
+        next = curr->next;  // Store next node
+        curr->next = prev;  // Reverse the link
+        prev = curr;        // Move prev to current node
+        curr = next;        // Move to next node
+    }
+    return prev;  // New head of the reversed list
+}
+
+// Driver function
+int main() {
+    Node* head = nullptr;
+    
+    // Insert elements into the list
+    insert(head, 1);
+    insert(head, 2);
+    insert(head, 3);
+    insert(head, 4);
+    insert(head, 5);
+
+    cout << "Original List: ";
+    printList(head);
+
+    // Reverse the list
+    head = reverseList(head);
+
+    cout << "Reversed List: ";
+    printList(head);
+
     return 0;
 }
