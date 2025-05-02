@@ -1,2 +1,1 @@
-Enter the number of rows and columns: Enter elements of first matrix: 
-Average of the Mettrix is: 4.44
+4646.25
